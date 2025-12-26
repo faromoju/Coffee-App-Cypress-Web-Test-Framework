@@ -1,0 +1,21 @@
+{
+  "name": "coffee-app-cypress",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "rm -rf mochawesome.json && rm -rf cypress/reports/*mochawesome* &&  npx cypress run --spec 'cypress/e2e/specs/*'",
+    "report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir cypress/reports/html",
+    "finalReport": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir Test_Report"
+  },
+  "devDependencies": {
+    "cypress": "^15.3.0",
+    "cypress-xpath": "^2.0.1",
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.0"
+  }
+}
