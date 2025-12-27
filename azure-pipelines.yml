@@ -19,3 +19,4 @@ steps:
   displayName: 'Run a multi-line script'
 
 - script: 'npm run test'
+  displayName: 'Run Coffee App Cypress Test'
