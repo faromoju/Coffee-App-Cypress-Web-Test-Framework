@@ -6,8 +6,8 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+pool:  
+  name: local 
 
 steps:
 - script: echo Hello, world!
@@ -22,5 +22,3 @@ steps:
   inputs:
     targetType: 'inline'
     script: 'npm run test'
-
-    
