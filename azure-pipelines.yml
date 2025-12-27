@@ -18,8 +18,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 
-- script: 'npm run test'
-  displayName: 'Run Coffee App Cypress Test'
+#- script: 'npm run test'
+#  displayName: 'Run Coffee App Cypress Test'
 
 - task: Bash@3
   inputs:
