@@ -3,6 +3,8 @@ trigger:
 
 pool:
   name: 'Local'
+  demands:
+    - Agent.OS -equals Linux
 
 variables:
   # Storing the npm cache in the local workspace for better performance
