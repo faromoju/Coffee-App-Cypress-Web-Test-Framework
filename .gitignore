@@ -1,5 +1,4 @@
 *node_modules/*
-package-lock.json
 .env
 cypress/reports/assets
 cypress/reports/html/assets
