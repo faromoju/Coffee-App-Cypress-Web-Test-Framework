@@ -12,7 +12,7 @@ steps:
 # 1. Ensure the correct Node.js version is present
 - task: NodeTool@0
   inputs:
-    versionSpec: '20.x'
+    versionSpec: '22.x'
   displayName: 'Install Node.js'
 
 # 2. Look for existing cache based on your lockfile
