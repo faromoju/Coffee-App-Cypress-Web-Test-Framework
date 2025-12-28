@@ -5,9 +5,9 @@
     "passes": 4,
     "pending": 0,
     "failures": 0,
-    "start": "2025-10-01T11:45:05.711Z",
-    "end": "2025-10-01T11:45:07.289Z",
-    "duration": 1578,
+    "start": "2025-12-27T15:13:11.740Z",
+    "end": "2025-12-27T15:13:16.197Z",
+    "duration": 4457,
     "testsRegistered": 4,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3e5090ce-f946-42a3-8c6a-ca6b7d78f85b",
+      "uuid": "95a782a5-ea17-4994-894b-e945715d78a8",
       "title": "",
       "fullFile": "cypress\\e2e\\specs\\gimmickFeatures.cy.js",
       "file": "cypress\\e2e\\specs\\gimmickFeatures.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3479a2c6-15ef-49f8-8c36-38734d046aa7",
+          "uuid": "956cf4a2-507c-4464-8937-b06d1d11d620",
           "title": "Double Click to convert name and Right Click to Add to Cart",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Verify that user can double click Coffee to convert name to Chinese",
               "fullTitle": "Double Click to convert name and Right Click to Add to Cart Verify that user can double click Coffee to convert name to Chinese",
               "timedOut": null,
-              "duration": 866,
+              "duration": 3057,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "_productPage.productPageObject.espressoCoffeeName().should('contain.text', 'Espresso');\n_productPage.productPageObject.doubleClickEspresso();\n_productPage.productPageObject.espressoCoffeeName().should('contain.text', '特浓咖啡');",
               "err": {},
-              "uuid": "26c29230-aec8-48e7-8228-babc026f4ad7",
-              "parentUUID": "3479a2c6-15ef-49f8-8c36-38734d046aa7",
+              "uuid": "15cfc969-2661-4b09-b681-367d32d1f9c7",
+              "parentUUID": "956cf4a2-507c-4464-8937-b06d1d11d620",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Verify that user can double click Coffee to convert name back to English",
               "fullTitle": "Double Click to convert name and Right Click to Add to Cart Verify that user can double click Coffee to convert name back to English",
               "timedOut": null,
-              "duration": 94,
+              "duration": 112,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "_productPage.productPageObject.doubleClickEspresso();\n_productPage.productPageObject.espressoCoffeeName().should('contain.text', 'Espresso');",
               "err": {},
-              "uuid": "afbb162f-6666-40fa-93bb-0460e7e14cfe",
-              "parentUUID": "3479a2c6-15ef-49f8-8c36-38734d046aa7",
+              "uuid": "f5e001e6-27b1-46a7-9df7-4f82f459526e",
+              "parentUUID": "956cf4a2-507c-4464-8937-b06d1d11d620",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Verify that user can right click and click no to add to cart",
               "fullTitle": "Double Click to convert name and Right Click to Add to Cart Verify that user can right click and click no to add to cart",
               "timedOut": null,
-              "duration": 326,
+              "duration": 643,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -83,8 +83,8 @@
               "context": null,
               "code": "_productPage.productPageObject.clickCafeLatteCoffee();\n_productPage.productPageObject.rightClickEspresso();\n_productPage.productPageObject.clickNoAddToCart();\n_productPage.productPageObject.hoverTotalBar();\n_productPage.productPageObject.cartItems().should('not.contain.text', 'Espresso x 1+-');",
               "err": {},
-              "uuid": "a0f5fcbe-f7c4-4962-a2af-800df645ccc4",
-              "parentUUID": "3479a2c6-15ef-49f8-8c36-38734d046aa7",
+              "uuid": "277dadc4-549b-484d-9e6a-f7240b064a64",
+              "parentUUID": "956cf4a2-507c-4464-8937-b06d1d11d620",
               "isHook": false,
               "skipped": false
             },
@@ -92,7 +92,7 @@
               "title": "Verify that user can right click and click yes to add to cart",
               "fullTitle": "Double Click to convert name and Right Click to Add to Cart Verify that user can right click and click yes to add to cart",
               "timedOut": null,
-              "duration": 205,
+              "duration": 214,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -101,23 +101,23 @@
               "context": null,
               "code": "_productPage.productPageObject.rightClickFlatWhite();\n_productPage.productPageObject.clickYesAddToCart();\n_productPage.productPageObject.hoverTotalBar();\n_productPage.productPageObject.cartItems().should('contain.text', 'Flat White x 1+-');",
               "err": {},
-              "uuid": "5ecd72f5-bf12-4f31-b9db-fcf3cd1c8da2",
-              "parentUUID": "3479a2c6-15ef-49f8-8c36-38734d046aa7",
+              "uuid": "19b349e5-f304-45a9-9d7c-9ef5c38d3c19",
+              "parentUUID": "956cf4a2-507c-4464-8937-b06d1d11d620",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "26c29230-aec8-48e7-8228-babc026f4ad7",
-            "afbb162f-6666-40fa-93bb-0460e7e14cfe",
-            "a0f5fcbe-f7c4-4962-a2af-800df645ccc4",
-            "5ecd72f5-bf12-4f31-b9db-fcf3cd1c8da2"
+            "15cfc969-2661-4b09-b681-367d32d1f9c7",
+            "f5e001e6-27b1-46a7-9df7-4f82f459526e",
+            "277dadc4-549b-484d-9e6a-f7240b064a64",
+            "19b349e5-f304-45a9-9d7c-9ef5c38d3c19"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1491,
+          "duration": 4026,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -156,7 +156,7 @@
         "html": false,
         "json": true
       },
-      "version": "6.3.0"
+      "version": "6.3.2"
     }
   }
 }
