@@ -37,7 +37,12 @@ steps:
     npm run test
   displayName: 'Run Coffee App Cypress Test'
 
-# 5. Publish Mochawesome Test Report as Pipeline Artifact
+# 5. Generate Mochawesome Report
+- script: |
+    npm run finalReport
+  displayName: 'Generate Test Report'
+
+# 6. Publish Mochawesome Test Report as Pipeline Artifact
 - task: PublishPipelineArtifact@1
   condition: always()
   inputs:
@@ -46,7 +51,7 @@ steps:
     publishLocation: 'pipeline'
   displayName: 'Upload Mochawesome Test Report'
 
-# 6. Publish Quick View Failure Screenshots
+# 7. Publish Quick View Failure Screenshots
 - task: PublishPipelineArtifact@1
   condition: failed()
   inputs:
@@ -54,7 +59,7 @@ steps:
     artifact: 'Failure_Screenshots'
   displayName: 'Publish Failure Screenshots'
 
-# 7. Clean Up Test Report
+# 8. Clean Up Test Report
 - script: |
     echo "Cleaning up workspace..."
     rm -rf $(Pipeline.Workspace)/s/cypress/screenshots/*
