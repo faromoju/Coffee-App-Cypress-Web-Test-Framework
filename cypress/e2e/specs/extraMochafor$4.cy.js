@@ -22,7 +22,7 @@ describe('Get the Extra Mocha Coffee for $4', () => {
     it('Verify that user can click Americano Coffee', () => {
         productPageObject.clickAmericanoCoffee()
         productPageObject.hoverTotalBar()
-        productPageObject.cartItems().should('contain.text', 'Espresso Macchiato x 1+-')
+        productPageObject.cartItems().should('contain.text', 'Cafe Latte x 1+-')
     })
 
     it('Verify that user can click Cafe Latte Coffee', () => {
