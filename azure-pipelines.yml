@@ -40,6 +40,7 @@ steps:
 # 5. Generate Mochawesome Report
 - script: |
     npm run finalReport
+  condition: always()
   displayName: 'Generate Test Report'
 
 # 6. Publish Mochawesome Test Report as Pipeline Artifact
