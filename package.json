@@ -9,7 +9,7 @@
   "scripts": {
     "test": "rm -rf mochawesome.json && rm -rf cypress/reports/*mochawesome* &&  npx cypress run --spec 'cypress/e2e/specs/*'",
     "report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir cypress/reports/html",
-    "finalReport": "rm -rf Test_Report/assets && rm -rf mochawesome.html && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir Test_Report"
+    "finalReport": "rm -rf Test_Report/assets && rm -rf Test_Report/mochawesome.html && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir Test_Report"
   },
   "devDependencies": {
     "cypress": "^15.3.0",
