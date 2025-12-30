@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Cypress Tests" timestamp="2025-12-30T13:58:36" tests="0" file="cypress\e2e\specs\gimmickFeatures.cy.js" package="Cypress Tests" hostname="DESKTOP-SVVH2AI" id="0" errors="0" time="0.000" failures="0">
+    <properties>
+    </properties>
+    <system-out>
+    </system-out>
+    <system-err>
+    </system-err>
+  </testsuite>
+  <testsuite name="Double Click to convert name and Right Click to Add to Cart" timestamp="2025-12-30T13:58:36" tests="4" package="Double Click to convert name and Right Click to Add to Cart" hostname="DESKTOP-SVVH2AI" id="1" errors="0" time="1.862" failures="0">
+    <properties>
+    </properties>
+    <testcase name="Verify that user can double click Coffee to convert name to Chinese" time="1.154" classname="Double Click to convert name and Right Click to Add to Cart Verify that user can double click Coffee to convert name to Chinese">
+    </testcase>
+    <testcase name="Verify that user can double click Coffee to convert name back to English" time="0.107" classname="Double Click to convert name and Right Click to Add to Cart Verify that user can double click Coffee to convert name back to English">
+    </testcase>
+    <testcase name="Verify that user can right click and click no to add to cart" time="0.306" classname="Double Click to convert name and Right Click to Add to Cart Verify that user can right click and click no to add to cart">
+    </testcase>
+    <testcase name="Verify that user can right click and click yes to add to cart" time="0.207" classname="Double Click to convert name and Right Click to Add to Cart Verify that user can right click and click yes to add to cart">
+    </testcase>
+    <system-out>
+    </system-out>
+    <system-err>
+    </system-err>
+  </testsuite>
+</testsuites>

@@ -16,6 +16,7 @@ export default defineConfig({
       mochaFile: 'cypress/results/test-results-[hash].xml',
       toConsole: true,
       outputs: true,
+      stdoutTitle: true,
       testCaseSwitchClassnameAndName: true,
       attachments: true,
       antMode: true,
