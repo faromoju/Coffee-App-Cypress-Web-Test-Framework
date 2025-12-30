@@ -17,13 +17,22 @@ export default defineConfig({
       toConsole: true,
       outputs: true,
       testCaseSwitchClassnameAndName: true,
-      attachments: true
+      attachments: true,
+      antMode: true,
+      antXmlReport: true,
+      testsuitesTitle: true,
+      rootSuiteTitle: 'Cypress Tests',
+      attachmentsConfig: {
+        screenshotDirectory: 'cypress/screenshots'
+      }
     },
   },
   e2e: {
     setupNodeEvents(on, config) {
       const mochawesome = require('cypress-mochawesome-reporter/plugin');
       mochawesome(on);
+
+      return config;
     },
     baseUrl: 'https://coffee-cart.app/',
     watchForFileChanges: false,

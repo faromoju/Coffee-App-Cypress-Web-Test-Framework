@@ -57,6 +57,7 @@ steps:
     testRunTitle: 'Coffee App E2E Test Result'
     searchFolder: '$(System.DefaultWorkingDirectory)'
     mergeTestResults: true
+    publishRunAttachments: true
     failTaskOnFailedTests: true
 
 # 8. Publish Test Report as Pipeline Artifact
