@@ -60,12 +60,6 @@ steps:
     publishRunAttachments: true
     failTaskOnFailedTests: true
 
-- script: |
-    echo "--- Current Directory Content ---"
-    ls -R cypress/screenshots
-  displayName: 'Verify Screenshot Physical Path'
-  condition: always()
-
 # 8. Publish Test Report as Pipeline Artifact
 - task: PublishPipelineArtifact@1
   condition: always()
