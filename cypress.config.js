@@ -16,7 +16,8 @@ export default defineConfig({
       mochaFile: 'cypress/results/test-results-[hash].xml',
       toConsole: true,
       outputs: true,
-      testCaseSwitchClassnameAndName: true
+      testCaseSwitchClassnameAndName: true,
+      attachments: true
     },
   },
   e2e: {
