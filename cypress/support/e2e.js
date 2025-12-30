@@ -16,13 +16,22 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 require('cypress-xpath');
+import 'cypress-mochawesome-reporter/register';
 
 Cypress.on('test:after:run', (test, runnable) => {
-  if (test.state === 'failed') {
-    const specName = Cypress.spec.name;
-    const testName = test.title;
-    const parentTitle = runnable.parent.title;
-    const screenshotPath = `../screenshots/${specName}/${parentTitle} -- ${testName} (failed).png`;
-    console.log(`[[ATTACHMENT|${screenshotPath}]]`);
-  }
+    if (test.state === 'failed') {
+        const specName = Cypress.spec.name;
+        const testName = test.title;
+        const parentTitle = runnable.parent.title;
+        const screenshotPath = `../screenshots/${specName}/${parentTitle} -- ${testName} (failed).png`;
+        const attachmentTag = `<![CDATA[[[ATTACHMENT|${screenshotPath}]]]]>`;
+        if (test.consoleOutputs) {
+            test.consoleOutputs.push(attachmentTag);
+        } else {
+            test.consoleOutputs = [attachmentTag];
+        }
+        console.log(attachmentTag);
+        const addContext = require('mochawesome/addContext');
+        addContext({ test }, `cypress/screenshots/${specName}/${parentTitle} -- ${testName} (failed).png`);
+    }
 });
