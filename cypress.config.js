@@ -13,8 +13,10 @@ export default defineConfig({
       saveAllAttempts: false,
     },
     mochaJunitReporterReporterOptions: {
-      mochaFile: 'cypress/results/test-results.xml',
+      mochaFile: 'cypress/results/test-results-[hash].xml',
       toConsole: true,
+      outputs: true,
+      testCaseSwitchClassnameAndName: true
     },
   },
   e2e: {
