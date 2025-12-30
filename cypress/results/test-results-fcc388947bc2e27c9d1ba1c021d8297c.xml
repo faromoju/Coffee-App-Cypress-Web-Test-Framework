@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Cypress Tests" timestamp="2025-12-30T13:58:31" tests="0" file="cypress\e2e\specs\extraMochafor$4.cy.js" package="Cypress Tests" hostname="DESKTOP-SVVH2AI" id="0" errors="0" time="0.000" failures="0">
+    <properties>
+    </properties>
+    <system-out>
+    </system-out>
+    <system-err>
+    </system-err>
+  </testsuite>
+  <testsuite name="Get the Extra Mocha Coffee for $4" timestamp="2025-12-30T13:58:31" tests="10" package="Get the Extra Mocha Coffee for $4" hostname="DESKTOP-SVVH2AI" id="1" errors="0" time="2.768" failures="0">
+    <properties>
+    </properties>
+    <testcase name="Verify that there is no total before items have been added to cart" time="0.996" classname="Get the Extra Mocha Coffee for $4 Verify that there is no total before items have been added to cart">
+    </testcase>
+    <testcase name="Verify that user can click Espresso Macchiato Coffee" time="0.260" classname="Get the Extra Mocha Coffee for $4 Verify that user can click Espresso Macchiato Coffee">
+    </testcase>
+    <testcase name="Verify that user can click Americano Coffee" time="0.129" classname="Get the Extra Mocha Coffee for $4 Verify that user can click Americano Coffee">
+    </testcase>
+    <testcase name="Verify that user can click Cafe Latte Coffee" time="0.119" classname="Get the Extra Mocha Coffee for $4 Verify that user can click Cafe Latte Coffee">
+    </testcase>
+    <testcase name="Verify that Cart and Total Info is correct" time="0.021" classname="Get the Extra Mocha Coffee for $4 Verify that Cart and Total Info is correct">
+    </testcase>
+    <testcase name="Verify that user can skip Extra Mocha Promo" time="0.099" classname="Get the Extra Mocha Coffee for $4 Verify that user can skip Extra Mocha Promo">
+    </testcase>
+    <testcase name="Verify that user can add three more Coffees to prompt promo" time="0.239" classname="Get the Extra Mocha Coffee for $4 Verify that user can add three more Coffees to prompt promo">
+    </testcase>
+    <testcase name="Verify that Cart and Total Info is correct" time="0.026" classname="Get the Extra Mocha Coffee for $4 Verify that Cart and Total Info is correct">
+    </testcase>
+    <testcase name="Verify that user can accept Extra Mocha Promo" time="0.743" classname="Get the Extra Mocha Coffee for $4 Verify that user can accept Extra Mocha Promo">
+    </testcase>
+    <testcase name="Verify that Cart and Total Info is correct" time="0.016" classname="Get the Extra Mocha Coffee for $4 Verify that Cart and Total Info is correct">
+    </testcase>
+    <system-out>
+    </system-out>
+    <system-err>
+    </system-err>
+  </testsuite>
+</testsuites>
