@@ -9,13 +9,20 @@
   "scripts": {
     "test": "rm -rf mochawesome.json && rm -rf cypress/reports/*mochawesome* &&  npx cypress run --spec 'cypress/e2e/specs/*'",
     "report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir cypress/reports/html",
-    "finalReport": "rm -rf Test_Report/assets && rm -rf Test_Report/mochawesome.html && npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json --reportDir Test_Report"
+    "cleanReportCommand": "rm -rf cypress/reports Test_Report/index.html cypress/results",
+    "cleanReport": "npm run cleanReportCommand",
+    "finalReport": "npx cypress run",
+    "generateTestReport": "shx mkdir -p Test_Report && shx cp -r cypress/reports/. Test_Report/"
   },
   "devDependencies": {
     "cypress": "^15.3.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-multi-reporters": "^2.0.5",
     "cypress-xpath": "^2.0.1",
+    "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.0.0",
-    "mochawesome-report-generator": "^6.3.0"
+    "mochawesome-report-generator": "^6.3.0",
+    "shx": "^0.4.0"
   }
 }
