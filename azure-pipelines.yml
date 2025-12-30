@@ -32,27 +32,41 @@ steps:
     npm ci --cache $(npm_config_cache)
   displayName: 'Install Dependencies'
 
-# 4. Run Coffee App Tests
+# 4. Clean up old Test Reports
 - script: |
-    npm run test
-  displayName: 'Run Coffee App Cypress Test'
+    npm run cleanReport
+  displayName: 'Clean Test Reports'
 
-# 5. Generate Mochawesome Report
+# 5. Run Coffee App Tests
 - script: |
     npm run finalReport
+  displayName: 'Run Coffee App Cypress Test'
+
+# 6. Generate Mochawesome Report
+- script: |
+    npm run generateTestReport
   condition: always()
   displayName: 'Generate Test Report'
 
-# 6. Publish Mochawesome Test Report as Pipeline Artifact
+# 7. Publish Test Result as Pipeline Artifact
+- task: PublishTestResults@2
+  displayName: 'Upload JUnit Result'
+  condition: always()
+  inputs:
+    testResultsFiles: 'cypress/results/*.xml'
+    testRunTitle: 'Coffee App E2E Test Result'
+    mergeTestResults: true
+
+# 8. Publish Test Report as Pipeline Artifact
 - task: PublishPipelineArtifact@1
   condition: always()
   inputs:
     targetPath: 'Test_Report'
-    artifact: 'MochawesomeTestReport'
+    artifact: 'TestReport'
     publishLocation: 'pipeline'
-  displayName: 'Upload Mochawesome Test Report'
+  displayName: 'Upload Test Report'
 
-# 7. Publish Quick View Failure Screenshots
+# 9. Publish Quick View Failure Screenshots
 - task: PublishPipelineArtifact@1
   condition: failed()
   inputs:
@@ -60,7 +74,7 @@ steps:
     artifact: 'Failure_Screenshots'
   displayName: 'Publish Failure Screenshots'
 
-# 8. Clean Up Test Report
+# 10. Clean Up Test Report in Agent
 - script: |
     echo "Cleaning up workspace..."
     rm -rf $(Pipeline.Workspace)/s/cypress/screenshots/*
