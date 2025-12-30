@@ -16,19 +16,13 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 require('cypress-xpath');
-import addContext from 'mochawesome/addContext';
 
 Cypress.on('test:after:run', (test, runnable) => {
-    if (test.state === 'failed') {
-        const specName = Cypress.spec.name;
-        const testName = test.title;
-        const screenshotPath = `cypress/screenshots/${specName}/${runnable.parent.title} -- ${testName} (failed).png`;
-        const attachmentString = `[[ATTACHMENT|${screenshotPath}]]`;
-        if (test.consoleOutputs) {
-            test.consoleOutputs.push(attachmentString);
-        } else {
-            test.consoleOutputs = [attachmentString];
-        }
-        console.log(attachmentString);
-    }
+  if (test.state === 'failed') {
+    const specName = Cypress.spec.name;
+    const testName = test.title;
+    const parentTitle = runnable.parent.title;
+    const screenshotPath = `../screenshots/${specName}/${parentTitle} -- ${testName} (failed).png`;
+    console.log(`[[ATTACHMENT|${screenshotPath}]]`);
+  }
 });
