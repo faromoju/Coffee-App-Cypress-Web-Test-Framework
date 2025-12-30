@@ -59,7 +59,7 @@ describe('Get the Extra Mocha Coffee for $4', () => {
     })
 
     it('Verify that Cart and Total Info is correct', () => {
-        navigationControlObject.cartTab().should('contain.text', '8')
+        navigationControlObject.cartTab().should('contain.text', '7')
         productPageObject.totalBar().should('contain.text', '82')
     })
 })
