@@ -55,6 +55,7 @@ steps:
   inputs:
     testResultsFiles: 'cypress/results/test-results-*.xml'
     testRunTitle: 'Coffee App E2E Test Result'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
     mergeTestResults: true
     failTaskOnFailedTests: true
 
